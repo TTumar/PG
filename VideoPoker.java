@@ -34,12 +34,7 @@ import java.util.*;
  */
 
 
-/* This is the main poker game class.
- * It uses Decks and Card objects to implement poker game.
- * Please do not modify any data fields or defined methods
- * You may add new data fields and methods
- * Note: You must implement defined methods
- */
+/* This is the main poker game class. */
 
 
 public class VideoPoker {
@@ -54,7 +49,7 @@ public class VideoPoker {
             "Royal Pair" , "Two Pairs" , "Three of a Kind", "Straight", "Flush",
             "Full House", "Four of a Kind", "Straight Flush", "Royal Flush" };
 
-    // must use only one deck
+   
     private static final Decks oneDeck = new Decks(1);
 
     // holding current poker 5-card hand, balance, bet    
@@ -133,10 +128,7 @@ public class VideoPoker {
     }//end checkHands
 
 
-    /*************************************************
-     *   add other private methods here ....
-     *
-     *************************************************/
+ 
     private TreeMap getFrequency (){
         TreeMap<Integer,Integer> hand = new TreeMap<Integer,Integer>();
         for (int i=0; i<NUMBER_OF_CARDS; i++)  {
@@ -233,9 +225,8 @@ public class VideoPoker {
                     if (discardArray.get(i)<1 || discardArray.get(i)>=6){
                         System.out.println("Error, position number out of range. Choose 1 - 5");
                         count++;
-                        //break;
                     }
-                }//end for (int i=0; i < discardArray.size(); i++)
+                }
 
                 if(count==0){
                     //extract held cards, add them into new array
@@ -319,14 +310,9 @@ public class VideoPoker {
             playAgain = retry();
         }
 
-        // implement this method!
     }
 
 
-
-    /*************************************************
-     *   Do not modify methods below
-    /*************************************************
 
 
     /** testCheckHands() is used to test checkHands() method 
