@@ -7,7 +7,6 @@ import java.util.*;
 
 /** class PlayingCardException: It is used for errors related to Card and Deck objects
  *  This is a checked exception! 
- *  Do not modify this class!
  */
 class PlayingCardException extends Exception {
 
@@ -28,7 +27,6 @@ class PlayingCardException extends Exception {
  *  it is an immutable class.
  *  Rank - valid values are 1 to 13
  *  Suit - valid values are 1 to 4
- *  Do not modify this class!
  */
 class Card {
     /* constant suits and ranks */
@@ -53,7 +51,6 @@ class Card {
     }
 
     /* Accessor and toString */
-    /* You may implement equals(), but it will not be used */
     public int getRank() { return cardRank; }
     public int getSuit() { return cardSuit; }
     public String toString() { return Rank[cardRank] + " " + Suit[cardSuit]; }
@@ -79,10 +76,6 @@ class Card {
 
 /** class Decks represents : n decks of 52 playing cards
  *  Use class Card to construct n * 52 playing cards!
- *
- *  Do not add new data fields!
- *  Do not modify any methods
- *  You may add private methods 
  */
 
 class Decks {
@@ -130,8 +123,6 @@ class Decks {
      * Constructor: Creates n 52-card decks of playing cards in
      *              originalDecks and copy them to currentDecks.
      *              initialize numOfDecks=n
-     * Note: You need to catch PlayingCardException from Card constructor
-     *       Use ArrayList for both originalDecks & currentDecks
      */
     public Decks(int n)  {
         numOfDecks = n;
@@ -156,12 +147,10 @@ class Decks {
 
     /**
      * Task: Shuffles cards in currentDecks.
-     * Hint: Look at java.util.Collections
      */
     public void shuffle()
     {
         Collections.shuffle(currentDecks);
-        // implement this method!
 
     }
 
@@ -173,13 +162,10 @@ class Decks {
      * @return a list containing cards that were dealt
      * @throw PlayingCardException if numberCards > number of remaining cards
      *
-     * Note: You need to create ArrayList to store dealt cards
-     *       and remove dealt cards from currentDecks
-     *
      */
     public List<Card> deal(int numOfCards) throws PlayingCardException {
         List<Card> dealCard = new ArrayList<Card>();
-        // implement this method!
+        
         if (numOfCards > currentDecks.size()){
             throw new PlayingCardException("Not enough cards to deal");
         }
@@ -195,7 +181,6 @@ class Decks {
      */
     public void reset()
     {
-        // implement this method!
         currentDecks = new ArrayList<Card>(originalDecks);
 
     }
@@ -220,7 +205,6 @@ class Decks {
 
     /* Quick test                   */
     /*                              */
-    /* Do not modify these tests    */
     /* Generate 2 decks of cards    */
     /* Loop 2 times:                */
     /*   Deal 30 cards for 4 times  */
