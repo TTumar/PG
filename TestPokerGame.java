@@ -1,14 +1,12 @@
 /*************************************************************************************
  *
  *  This program is used to test PJ4.VideoPoker class
- *  More info are given in Readme.txt file
  * 
  *  PJ4 class allows user to run program as follows:
  *
  *    	java PJ4		// default credit is $100
  *  or 	java PJ4 NNN		// set initial credit to NNN
  *
- *  Do not modify this file!
  *
  **************************************************************************************/
 
